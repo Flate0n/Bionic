@@ -1,201 +1,144 @@
 body {
-            background: linear-gradient(135deg, #0d0d0d 10%, #551a8b 60%, #00015c 95%);
-            /* Градиентный фон */
-            color: #e0e0e0;
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            min-height: 100vh;
-        }
+    background: linear-gradient(135deg, #0d0d0d 10%, #551a8b 60%, #00015c 95%);
+    /* Градиентный фон */
+    color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
 
-        .container {
-            width: 80%;
-            margin: auto;
-        }
+.container {
+    width: 80%;
+    margin: auto;
+}
 
-        .header {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            /* Изменено с space-between на flex-start, чтобы заголовок не занимал весь доступный горизонт */
-            margin-top: 50px;
-            color: #00ffff;
-        }
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Изменено с space-between на flex-start, чтобы заголовок не занимал весь доступный горизонт */
+    margin-top: 50px;
+    color: #00ffff;
+}
 
-        .header img {
-            border-radius: 50%;
-            /* Круглая рамка для фотографии */
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            margin-right: 20px;
-        }
+.header img {
+    border-radius: 50%;
+    /* Круглая рамка для фотографии */
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 20px;
+}
 
-        .header h1 {
-            margin: 0;
-            margin-left: 20px;
-            /* Отступ от изображения */
-        }
+.header h1 {
+    margin: 0;
+    margin-left: 20px;
+    /* Отступ от изображения */
+}
 
+.navBar {
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
 
-        .navBar {
-            background-color: #333;
-            padding: 10px;
-            margin: 0;
-            text-align: center;
-        }
+.navBar a {
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
 
-        .navBar a {
-            color: #e0e0e0;
-            text-decoration: none;
-            padding: 10px 20px;
-            display: inline-block;
-        }
+.navBar a:hover {
+    background-color: #555;
+}
 
-        .navBar a:hover {
-            background-color: #555;
-        }
+.product-block {
+    background: transparent;
+    /* Убираем градиентный фон для блоков */
+    border-radius: 0;
+    /* Убираем округление */
+    margin: 40px 0;
+    padding: 20px;
+    box-shadow: none;
+    /* Убираем тень */
+    overflow: hidden;
+    /* Обеспечиваем, что элементы не выходят за пределы блока */
+}
 
-        .product-block {
-            background: transparent;
-            /* Убираем градиентный фон для блоков */
-            border-radius: 0;
-            /* Убираем округление */
-            margin: 40px 0;
-            padding: 20px;
-            box-shadow: none;
-            /* Убираем тень */
-            overflow: hidden;
-            /* Обеспечиваем, что элементы не выходят за пределы блока */
-        }
+.product-block h2 {
+    color: #00ffff;
+    margin-bottom: 20px;
+}
 
-        .product-block h2 {
-            color: #00ffff;
-            margin-bottom: 20px;
-        }
+.image-text-wrapper {
+    display: flex;
+    align-items: flex-start;
+    /* Выравнивание по верхнему краю */
+    margin-bottom: 20px;
+    /* Отступ снизу */
+}
 
-        .image-text-wrapper {
-            display: flex;
-            align-items: flex-start;
-            /* Выравнивание по верхнему краю */
-            margin-bottom: 20px;
-            /* Отступ снизу */
-        }
+.image-text-wrapper img {
+    max-width: 100%;
+    /* Максимальная ширина изображения — 100% от родительского элемента */
+    margin-right: 20px;
+    /* Отступ справа от изображения */
+}
 
-        .image-text-wrapper img {
-            max-width: 100%;
-            /* Максимальная ширина изображения — 100% от родительского элемента */
-            margin-right: 20px;
-            /* Отступ справа от изображения */
-        }
+.image-text-wrapper .text {
+    flex: 1;
+}
 
-        .image-text-wrapper .text {
-            flex: 1;
-        }
+.placeholder-image {
+    width: 50%;
+    background-color: #333;
+    color: #777;
+    text-align: center;
+    line-height: 200px;
+    font-size: 24px;
+    margin-top: 18px;
+    border-radius: 0;
+    margin-right: 20px;
+}
 
-        .placeholder-image {
-            width: 50%;
-            background-color: #333;
-            color: #777;
-            text-align: center;
-            line-height: 200px;
-            font-size: 24px;
-            margin-top: 18px;
-            border-radius: 0;
-            margin-right: 20px;
-        }
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #0d0d0d;
+    background: linear-gradient(135deg, #00ffff, #551a8b);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            color: #0d0d0d;
-            background: linear-gradient(135deg, #00ffff, #551a8b);
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            margin: 10px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        }
+.button:hover {
+    background: linear-gradient(135deg, #00e6e6, #7a4dc7);
+}
 
-        .button:hover {
-            background: linear-gradient(135deg, #00e6e6, #7a4dc7);
-        }
+.technologies {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 столбца */
+    gap: 20px;
+    /* Расстояние между блоками */
+}
 
-        .technologies {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            /* 2 столбца */
-            gap: 20px;
-            /* Расстояние между блоками */
-        }
+.technology-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
 
-        .technology-item {
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 15px;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        }
+.technology-item h3 {
+    color: #00ffff;
+    margin-top: 0;
+}
 
-        .technology-item h3 {
-            color: #00ffff;
-            margin-top: 0;
-        }
-
-        .contact-info {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-        }
-
-        .contact-info-block {
-            width: 45%;
-        }
-
-        .contact-info-block h3 {
-            color: #00ffff;
-            margin-bottom: 10px;
-        }
-
-        .contact-info-block p {
-            margin: 0;
-            color: #e0e0e0;
-        }
-
-        /* Таблица характеристик */
-        .specifications {
-            background: transparent;
-            /* Убираем градиентный фон для блока */
-            border-radius: 0;
-            /* Убираем округление */
-            padding: 20px;
-            margin: 40px 0;
-            box-shadow: none;
-            /* Убираем тень */
-        }
-
-        .specifications h2 {
-            color: #00ffff;
-            margin-bottom: 20px;
-        }
-
-        .specifications table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .specifications th,
-        .specifications td {
-            padding: 10px;
-            text-align: left;
-        }
-
-        .specifications th {
-            color: #00ffff;
-            border-bottom: 1px solid #333;
-        }
-
-        .specifications td {
-            color: #e0e0e0;
-        }
