@@ -9,32 +9,37 @@ body {
 }
 
 .container {
-    width: 80%;
+    width: 90%;
+    /* Увеличиваем ширину контейнера для мобильных устройств */
     margin: auto;
 }
 
 .header {
     display: flex;
+    flex-direction: column;
+    /* Изменяем направление на колонку для мобильных устройств */
     align-items: center;
-    justify-content: flex-start;
-    /* Изменено с space-between на flex-start, чтобы заголовок не занимал весь доступный горизонт */
-    margin-top: 50px;
+    justify-content: center;
+    margin-top: 20px;
     color: #00ffff;
 }
 
 .header img {
     border-radius: 50%;
     /* Круглая рамка для фотографии */
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    /* Уменьшаем ширину изображения */
+    height: 200px;
+    /* Уменьшаем высоту изображения */
     object-fit: cover;
-    margin-right: 20px;
+    margin: 0 0 10px 0;
+    /* Убираем отступ справа и добавляем отступ снизу */
 }
 
 .header h1 {
     margin: 0;
-    margin-left: 20px;
-    /* Отступ от изображения */
+    font-size: 1.5em;
+    /* Уменьшаем размер шрифта заголовка */
 }
 
 .navBar {
@@ -42,13 +47,18 @@ body {
     padding: 10px;
     margin: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* Изменяем направление на колонку для мобильных устройств */
 }
 
 .navBar a {
     color: #e0e0e0;
     text-decoration: none;
-    padding: 10px 20px;
-    display: inline-block;
+    padding: 10px;
+    /* Убираем горизонтальные отступы для мобильных устройств */
+    display: block;
+    /* Переключаем ссылки на блочные элементы для удобства */
 }
 
 .navBar a:hover {
@@ -60,8 +70,10 @@ body {
     /* Убираем градиентный фон для блоков */
     border-radius: 0;
     /* Убираем округление */
-    margin: 40px 0;
-    padding: 20px;
+    margin: 20px 0;
+    /* Уменьшаем отступы */
+    padding: 15px;
+    /* Уменьшаем внутренние отступы */
     box-shadow: none;
     /* Убираем тень */
     overflow: hidden;
@@ -70,38 +82,47 @@ body {
 
 .product-block h2 {
     color: #00ffff;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    /* Уменьшаем нижний отступ заголовка */
 }
 
 .image-text-wrapper {
     display: flex;
-    align-items: flex-start;
-    /* Выравнивание по верхнему краю */
+    flex-direction: column;
+    /* Изменяем направление на колонку для мобильных устройств */
+    align-items: center;
+    /* Выравнивание по центру */
     margin-bottom: 20px;
     /* Отступ снизу */
 }
 
 .image-text-wrapper img {
-    max-width: 100%;
-    /* Максимальная ширина изображения — 100% от родительского элемента */
-    margin-right: 20px;
-    /* Отступ справа от изображения */
+    width: 100%;
+    /* Изображение занимает всю ширину родителя */
+    margin-right: 0;
+    /* Убираем отступ справа от изображения */
 }
 
 .image-text-wrapper .text {
     flex: 1;
+    text-align: center;
+    /* Выравнивание текста по центру */
 }
 
 .placeholder-image {
-    width: 50%;
+    width: 100%;
+    /* Занимает всю ширину родителя */
     background-color: #333;
     color: #777;
     text-align: center;
-    line-height: 200px;
-    font-size: 24px;
-    margin-top: 18px;
+    line-height: 150px;
+    /* Уменьшаем высоту блока */
+    font-size: 20px;
+    /* Уменьшаем размер шрифта */
+    margin-top: 10px;
     border-radius: 0;
-    margin-right: 20px;
+    /* Убираем округление */
+    margin-right: 0;
 }
 
 .button {
@@ -124,21 +145,58 @@ body {
 
 .technologies {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    /* 2 столбца */
-    gap: 20px;
-    /* Расстояние между блоками */
+    grid-template-columns: 1fr;
+    /* Один столбец для мобильных устройств */
+    gap: 10px;
+    /* Уменьшаем расстояние между блоками */
 }
 
 .technology-item {
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 10px;
-    padding: 15px;
+    padding: 10px;
+    /* Уменьшаем внутренние отступы */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .technology-item h3 {
     color: #00ffff;
     margin-top: 0;
+    font-size: 1.2em;
+    /* Уменьшаем размер шрифта заголовка */
+}
+
+/* Медиазапросы для устройств с шириной экрана до 600px */
+@media (max-width: 600px) {
+    .header img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .header h1 {
+        font-size: 1.2em;
+    }
+
+    .product-block {
+        padding: 10px;
+    }
+
+    .image-text-wrapper {
+        flex-direction: column;
+    }
+
+    .image-text-wrapper img {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .placeholder-image {
+        line-height: 120px;
+        font-size: 18px;
+    }
+
+    .navBar a {
+        padding: 15px;
+    }
 }
 
